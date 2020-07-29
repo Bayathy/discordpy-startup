@@ -58,8 +58,6 @@ async def kadailist(message):
     await message.channel.send(string)
 
 
-TOKEN = 'NzM3ODIyMDEzNTQ4MjY1NTMz.XyC8TA.DgdrvEFH8u5LpBvP7Fe-NMw9Oj0'
-
 
 Commands = {
     'commandlist':{
