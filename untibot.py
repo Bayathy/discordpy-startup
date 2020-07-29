@@ -53,7 +53,7 @@ async def kadailist(message):
     await message.channel.send(string)
 
 
-TOKEN = 'NzM2MDkwNjI5MjE3NTgzMTM0.Xxpv0Q._UbQXi3kFrv-AHKx-B7P1B_RTss'
+TOKEN = 'NzM3ODIyMDEzNTQ4MjY1NTMz.XyC8TA.DgdrvEFH8u5LpBvP7Fe-NMw9Oj0'
 
 
 Commands = {
@@ -98,5 +98,5 @@ async def on_message(message):
       if msg[0] in ['!' + command, Commands[command]['unti']]:
           await Commands[command]['func'](message)
 
-client.run('NzM2MDkwNjI5MjE3NTgzMTM0.Xxpv0Q._UbQXi3kFrv-AHKx-B7P1B_RTss')
+client.run('NzM3ODIyMDEzNTQ4MjY1NTMz.XyC8TA.DgdrvEFH8u5LpBvP7Fe-NMw9Oj0')
           
