@@ -1,12 +1,7 @@
-from discord.ext import commands
-import os
-import traceback
-
-bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
-
+import discord
 
 kadaidesu_list = []
+client = discord.Client()
 
 
 
@@ -58,6 +53,8 @@ async def kadailist(message):
     await message.channel.send(string)
 
 
+TOKEN = 'DISCORD_BOT_TOKEN'
+
 
 Commands = {
     'commandlist':{
@@ -86,12 +83,12 @@ Commands = {
     },
 }
     
-@bot.event
+@client.event
 async def on_ready():
      print('課題ちゃん参上')
 
 
-@bot.event
+@client.event
 async def on_message(message):
   msg = message.content.split(' ')
 
@@ -101,4 +98,4 @@ async def on_message(message):
       if msg[0] in ['!' + command, Commands[command]['unti']]:
           await Commands[command]['func'](message)
 
-bot.run(token)
+client.run('DISCORD_BOT_TOKEN')
